@@ -14,6 +14,12 @@ public class SortUKTownNames {
         /*List<Map.Entry<String,Integer>> townMapArray = new ArrayList<Map.Entry<String,Integer>>();
         townMapArray.addAll(townMap.entrySet());
         townMapArray.sort(Map.Entry.comparingByKey());*/
+        System.out.println("Before sorting...");
+        Iterator<Map.Entry<String,Integer>>townMapIterator = townMap.entrySet().iterator();
+        while(townMapIterator.hasNext()){
+            System.out.println(townMapIterator.next());
+        }
+        System.out.println("After sorting...");
         /**
          * Creating a treemap to hold the sorted map. A custom comparator was created to sort by the value
          * fields instead of the keys
@@ -23,9 +29,9 @@ public class SortUKTownNames {
         /**
          * An iterator to traverse the sorted map containing the town details
          */
-        Iterator<Map.Entry<String,Integer>>townMapIterator = sortedTownMap.entrySet().iterator();
-        while(townMapIterator.hasNext()){
-            System.out.println(townMapIterator.next());
+        Iterator<Map.Entry<String,Integer>>sortedTownMapIterator = sortedTownMap.entrySet().iterator();
+        while(sortedTownMapIterator.hasNext()){
+            System.out.println(sortedTownMapIterator.next());
         }
 
 
